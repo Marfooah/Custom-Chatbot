@@ -33,20 +33,6 @@ The chatbot allows users to upload TXT and Excel (.xlsx) files and ask questions
 
 ---
 
-## Project Structure
-
-```text
-project/
-│
-├── app.py
-├── requirements.txt
-├── Company_sample.txt
-├── Company_sample.xlsx
-└── README.md
-```
-
----
-
 ## Installation
 
 Clone the repository:
