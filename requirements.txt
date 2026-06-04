@@ -1,0 +1,8 @@
+streamlit
+langchain-community
+unstructured[xlsx]
+langchain-text-splitters
+langchain-google-genai
+faiss-cpu
+pandas
+openpyxl
