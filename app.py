@@ -160,7 +160,7 @@ Answer: Provide a clear and concise answer based on the context above, if the co
             answer = rag(user_query)
 
         with st.chat_message("user"):
-    st.write(user_query)
+            st.write(user_query)
 
         with st.chat_message("assistant"):
-    st.write(answer)
+            st.write(answer)
