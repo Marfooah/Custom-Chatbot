@@ -154,7 +154,7 @@ Answer: Provide a clear and concise answer based on the context above, if the co
     "Ask something about your documents..."
 )
 
-    if st.button("Ask") and user_query:
+    if user_query:
 
         with st.spinner("Thinking..."):
             answer = rag(user_query)
