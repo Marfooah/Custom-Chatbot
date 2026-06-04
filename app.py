@@ -10,20 +10,68 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.prompts import PromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-st.set_page_config(page_title="RAG Chatbot", page_icon="🤖")
-
-st.title("🤖 Excel & TXT Chatbot")
-
-google_api_key = st.text_input(
-    "Enter your Gemini API Key",
-    type="password"
+st.set_page_config(
+    page_title="Document Intelligence AI",
+    page_icon="🤖",
+    layout="wide"
 )
 
-uploaded_files = st.file_uploader(
-    "Upload TXT and/or Excel files",
-    type=["txt", "xlsx"],
-    accept_multiple_files=True
-)
+st.markdown("""
+# 🚀 Document Intelligence AI
+
+Ask questions from your TXT and Excel files in seconds.
+
+Upload your documents, chat with your data, and get instant AI-powered insights.
+""")
+
+st.markdown("""
+<style>
+.stApp {
+    background-color: #0e1117;
+}
+
+h1, h2, h3 {
+    color: white;
+}
+
+[data-testid="stChatMessage"] {
+    border-radius: 15px;
+    padding: 10px;
+}
+
+[data-testid="stSidebar"] {
+    background-color: #161b22;
+}
+</style>
+""", unsafe_allow_html=True)
+
+with st.sidebar:
+    st.title("🤖 RAG Chatbot")
+
+    st.markdown("""
+    ### Supported Files
+    - TXT
+    - XLSX
+
+    ### Powered By
+    - Gemini 2.5 Flash
+    - LangChain
+    - FAISS
+    """)
+
+with st.container():
+    st.subheader("📂 Upload Documents")
+
+    uploaded_files = st.file_uploader(
+        "Upload TXT and Excel files",
+        type=["txt", "xlsx"],
+        accept_multiple_files=True
+    )
+
+if uploaded_files:
+    st.success(f"✅ {len(uploaded_files)} file(s) uploaded successfully")
+
+google_api_key = st.secrets["GOOGLE_API_KEY"]
 
 if google_api_key and uploaded_files:
 
@@ -102,14 +150,17 @@ Answer: Provide a clear and concise answer based on the context above, if the co
 
         return response.content
 
-    user_query = st.text_input(
-        "Ask a question about your uploaded files:"
-    )
+    user_query = st.chat_input(
+    "Ask something about your documents..."
+)
 
     if st.button("Ask") and user_query:
 
         with st.spinner("Thinking..."):
             answer = rag(user_query)
 
-        st.subheader("Answer")
-        st.write(answer)
+        with st.chat_message("user"):
+    st.write(user_query)
+
+        with st.chat_message("assistant"):
+    st.write(answer)
