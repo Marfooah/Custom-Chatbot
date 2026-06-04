@@ -132,3 +132,5 @@ When running the application:
 * Chat history
 * Persistent vector database
 * Deployment on Streamlit Community Cloud
+
+The Google Stitch UI design is included as a ZIP file due to multiple nested folders and duplicate filenames within the export structure. Please download and extract the ZIP to view the full design.
