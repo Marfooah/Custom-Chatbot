@@ -8,6 +8,22 @@ The chatbot allows users to upload TXT and Excel (.xlsx) files and ask questions
 
 ---
 
+🚀 Live Demo: https://aidailymoodtracker.streamlit.app/
+
+## 📸 Application Preview
+
+### Home Page
+<img width="2950" height="1156" alt="image" src="https://github.com/user-attachments/assets/e8623853-3f6b-499b-a779-541e99037a29" />
+
+### Files Uploaded Successfully
+<img width="2950" height="1664" alt="image" src="https://github.com/user-attachments/assets/65797b2f-fb6e-46ed-8d04-6bce0a3d33b4" />
+
+### Queries regarding Uploaded files
+<img width="2950" height="1664" alt="image" src="https://github.com/user-attachments/assets/2f74cd23-d6ea-4a91-905d-b6a5b9d29cb0" />
+<img width="2950" height="670" alt="image" src="https://github.com/user-attachments/assets/fa390820-a0c1-49a0-9628-b25b07ecf00b" />
+
+---
+
 ## Features
 
 * Upload TXT files
