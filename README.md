@@ -8,7 +8,7 @@ The chatbot allows users to upload TXT and Excel (.xlsx) files and ask questions
 
 ---
 
-🚀 Live Demo: https://aidailymoodtracker.streamlit.app/
+🚀 Live Demo: https://custom-chatbot-2.streamlit.app/
 
 ## 📸 Application Preview
 
